@@ -1,0 +1,202 @@
+body{
+    position: relative;
+}
+.bgvideo{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+.bgvideo video{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.cell{
+    font-size: 65px;
+    text-align: center;
+    color: rgb(251, 255, 0);
+    width: 70px;
+    height: 70px;
+    background-color: rgb(220, 23, 224);
+    border: 2px solid rgb(31, 240, 255);
+    border-radius: 20px;
+    -webkit-text-stroke: 0.8px black;
+    cursor: pointer;
+    text-shadow: 0 0 20px rgb(0, 0, 0); 
+    
+}
+.cell:hover{
+    box-shadow: 2px 2px 5px 2px rgb(238, 6, 6);
+    transform: scale(1.1);
+    transition: 0.5s;
+    background-image: url(videos/bgimage.png);
+}
+#reset{
+    position: relative;
+    text-align: center;
+    top: 18px;
+    width: 150px;
+    height: 35px;
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+}
+#reset:hover{
+    box-shadow: 2px 2px 6px 1px black;
+}
+#parent{
+    position: relative;
+    top: 140px;
+    left: 600px;
+    text-align: center;
+    border: 2px solid;
+    width: 360px;
+    height: 440px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+#parent:hover{
+    transition:  0.7s;
+    box-shadow: 0px 1px 6px 4px rgb(247, 239, 12);
+}
+#child{
+    position: relative;
+    padding: 25px ;
+    padding-left: 38px;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    gap: 10px;
+    border: 1px solid;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 100px;
+    z-index: 0;
+}
+#child:hover{
+    border: dotted 3px;
+    border-color: rgb(234, 0, 0);
+    transition: 4s;
+    border-style: dotted;
+    border-radius: 40px;
+    box-shadow: 0px 1px 5px 2px rgb(0, 15, 228);
+    
+}
+#parent video{
+    position: absolute;
+    left: 0px;
+    border-radius: 18px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -0;
+    display: block;
+}
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+    #head {
+        left: 0;
+        text-align: center;
+    }
+
+    #parent {
+        width: 300px;
+        height: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 20px;
+    }
+
+    #child {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 10px;
+    }
+
+    .cell {
+        font-size: 40px;
+        width: 60px;
+        height: 60px;
+    }
+
+    #reset {
+        width: 130px;
+        height: 35px;
+        font-size: 12px;
+    }
+}
+
+/* For smaller screens (e.g. phones) */
+@media only screen and (max-width: 480px) {
+    #parent {
+        width: 100%;
+        height: auto;
+        left: 0;
+        top: 10px;
+    }
+
+    #child {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 5px;
+    }
+
+    .cell {
+        font-size: 30px;
+        width: 50px;
+        height: 50px;
+    }
+
+    #reset {
+        width: 120px;
+        height: 30px;
+        font-size: 10px;
+    }
+}
+#game{
+    position: relative;
+    top: -5px;
+    z-index: 2;
+     opacity: 0.7;
+     font-size: 35px;
+     text-decoration: red underline;
+}
+#winnerBoard{
+    
+    background-color: aqua;
+    position: relative;
+    top: -220px;
+    left: 589px;
+    width: 360px;
+    height: 190px;
+    padding-left: 20px;
+    border: 2px solid red;
+    border-radius: 45%;
+    
+}
+#head{
+
+    background-image: url(videos/bgimage.png);
+    border: 2px ;
+    background-color: aqua;
+    width: 330px;
+    border-radius: 35px;
+    height: 50px;
+    position: relative;
+    top: -425px;
+    padding: 8px;
+    padding-left: 26px;
+    padding-bottom: 10px;
+    left: 600px;
+    color: rgb(203, 203, 203);
+    font-size: 50px;
+    -webkit-text-stroke: 1px rgb(216, 15, 15);
+    text-shadow: 0 0 20px black;
+    
+}
